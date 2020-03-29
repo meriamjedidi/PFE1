@@ -6,18 +6,13 @@ using System.Threading.Tasks;
 
 namespace PFE1.ViewModels
 {
-    public class RegisterViewModel
-
+    public class Auth
     {
         [Key]
-        public int idregister { get; set; }
-        [Required]
-       [EmailAddress]
-        public string Email { get; set; }
-       [Required]
-        public string Password { get; set; }
-        [Required]
+        public int iduser { get; set; }
         public string Username { get; set; }
+        public string Password { get; set; }
+        public string Role { get; set; }
 
     }
 }

@@ -16,32 +16,15 @@ namespace PFE1.Data
 
         {
         }
+        public DbSet<Auth> Auth { get; set; }
+
+        public DbSet<Register> Registre { get; set; }
+
         public DbSet<Personnel> Personnel { get; set; }
 
-       
-
-        public DbSet<RegisterViewModel> Registre { get; set; }
 
 
 
-        protected override void OnModelCreating(ModelBuilder builder)
-        {
-            base.OnModelCreating(builder);
-            #region "Seed Data"
-            builder.Entity<IdentityRole>().HasData(
-                new { /* Id = "1", Name = "Personnel", NormalizedName = "Personnel"*/
-                    Id=1,
-                    Username= "meriam",
-                    Password="meriam123"
-                }
-                
-                
-
-
-                );
-            #endregion
-        }
 
     }
-
 }
